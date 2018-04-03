@@ -1,9 +1,15 @@
 const express = require('express')
 
 const inspi1 = require(`../mocks/inspirations/inspiration1.json`)
+// quand on va récup le json, il va être transformé en objet js normal par le require
 const inspi2 = require(`../mocks/inspirations/inspiration2.json`)
+const inspi3 = require(`../mocks/inspirations/inspiration3.json`)
 // nb : si on se trompe ici le server ne se mlance pas correctement
-const inspi = [inspi1, inspi2]
+const inspi = [ inspi1, inspi2, inspi3 ]
+
+console.log(inspi1)
+console.log(inspi2.description)
+console.log(inspi)
 
 // pour créer le serveur, on appelle express, juste.
 // Ca nous retourne un server, tout simplement,
