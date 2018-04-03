@@ -5,11 +5,14 @@ const inspi1 = require(`../mocks/inspirations/inspiration1.json`)
 const inspi2 = require(`../mocks/inspirations/inspiration2.json`)
 const inspi3 = require(`../mocks/inspirations/inspiration3.json`)
 // nb : si on se trompe ici le server ne se mlance pas correctement
-const inspi = [ inspi1, inspi2, inspi3 ]
+const inspirations = [ inspi1, inspi2, inspi3 ]
 
 console.log(inspi1)
 console.log(inspi2.description)
-console.log(inspi)
+console.log(inspirations)
+// ici on a fait le lien entre nos fichiers et notre app node.js, ca retourne la donnée que j'ai récup
+// but ensuite est de faire le lien entre mon app nodejs (cad ce que j'ai dans la mémoire de mon app nodejs)
+// et ce que retourne express
 
 // pour créer le serveur, on appelle express, juste.
 // Ca nous retourne un server, tout simplement,
@@ -22,6 +25,10 @@ const app = express()
 app.get('/', (req, res) => {
   res.send('OK')
 
+})
+
+app.get('/inspirations-yoga', (req, res) => {
+  res.json(inspirations)
 })
 
 const server = app.listen(5000, () => console.log(`j'écoute sur le port 5000`))
