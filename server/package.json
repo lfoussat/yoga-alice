@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lfoussat/yoga-alice/issues"
   },
-  "homepage": "https://github.com/lfoussat/yoga-alice#readme"
+  "homepage": "https://github.com/lfoussat/yoga-alice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
