@@ -1,3 +1,5 @@
+/* global fetch */
+
 import { showInspiration } from './components/inspiration.js'
 
 fetch('http://localhost:5300/inspirations-yoga')

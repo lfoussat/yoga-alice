@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Raleway');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  margin: 125px 0px 50px 0px;
+  text-align: center;
+}
+
+
+
+
+/***************** HEADER navigation *****************/
+
+/* Burger Navigation */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #8CAED6;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay > a {
+  padding-top: -15px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f9f8f6;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 1000;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #ff6858;
+}
+
+/* Navigation - close btn */
+.overlay #closeNavBtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.overlay #closeNavBtn:hover {
+  color: #f9f8f6;
+}
+/***************** END OF HEADER navigation *****************/
+
+/***************** FOOTER STYLE *****************/
+
+#yogaAliceFooter {
+  background-color: #257D4E;
+  text-align: center;
+  padding: 15px;
+  margin-top: 100px;
+}
+
+#yogaAliceFooter a, #yogaAliceFooter p {
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* inspirations */
+
+#inspirations {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+/***************** END OF FOOTER STYLE *****************/
+
+
+/***************** HEADER navbar *****************/
+/* General - Fixed position */
+#yogaAliceNavbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #257D4E;
+  display: block;
+  height: 60px;
+  padding: 0px;
+  z-index: 20;
+}
+
+/* Logo */
+#yogaAliceLogo {
+  position: absolute;
+  line-height: 60px;
+  width: 100%;
+  text-align: left;
+  margin-left: 15px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 4vh;
+}
+
+#yogaAliceLogo a {
+  color: #f9f8f6;
+}
+
+/* #yogaAliceLogo a:hover {
+  text-decoration: none;
+} */
+
+/* Navigation - open btn */
+#openNavBtn {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+  line-height: 60px;
+  color: #f9f8f6;
+}
+
+#openNavBtn:hover {
+  text-decoration: none;
+  color: #f9f8f6;
+}
+
+/* Main navigation */
+#mainNav {
+  text-align: right;
+  margin-right: 15px;
+  line-height: 60px;
+}
+
+#mainNav a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f9f8f6;
+  display: inline;
+  transition: 0.3s;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 1000;
+}
+
+#mainNav a:hover,
+#mainNav a:focus {
+  color: #ff6858;
+}
+/***************** END OF HEADER navbar *****************/
+
+@media screen and (max-width: 978px) {
+  #mainNav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 978px) {
+  #burgerBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closeNavBtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/***************** END OF HEADER STYLE *****************/

@@ -21,4 +21,4 @@ app.get('/inspirations-yoga', (req, res) => {
   res.json(inspirations)
 })
 
-const server = app.listen(5300, () => console.log(`j'écoute sur le port 5300`))
+app.listen(5300, () => console.log(`j'écoute sur le port 5300`))
