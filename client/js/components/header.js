@@ -34,10 +34,10 @@ headerElement.innerHTML = createHeader()
 
 // Navigation
 const openNav = () => {
-    document.getElementById("burgerNav").style.width = "100%";
+  document.getElementById('burgerNav').style.width = '100%'
 }
 const closeNav = () => {
-    document.getElementById("burgerNav").style.width = "0%";
+  document.getElementById('burgerNav').style.width = '0%'
 }
 
 const openNavElement = document.getElementById('openNavBtn')
