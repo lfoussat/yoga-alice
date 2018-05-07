@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/inspirations-yoga', (req, res) => {
-  res.json(inspirations)
+  db.getInspirations()
+    .then(inspirations => res.json(inspirations))
+    .catch(err => res.status(500).end(err.message))
 })
 
 app.listen(5300, () => console.log(`j'écoute sur le port 5300`))
