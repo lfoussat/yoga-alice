@@ -1,4 +1,5 @@
 /* global fetch */
+import { getAllInspirations } from './api.js'
 
 import { showInspiration } from './components/inspiration.js'
 
