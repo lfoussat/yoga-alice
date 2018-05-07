@@ -1,13 +1,13 @@
-/* global fetch */
+import { createInspirationInsert } from './components/inspiration.js'
 import { getAllInspirations } from './api.js'
 
-import { showInspiration } from './components/inspiration.js'
+const inspirationsElement = document.getElementById(`inspirations`)
 
-fetch('http://localhost:5300/inspirations-yoga')
-  .then(res => res.json())
-  .then(inspirations => {
-    const inspirationsElement = document.getElementById('inspirations')
-    inspirationsElement.innerHTML = inspirations.map(showInspiration).join('')
-    // JSON.stringify(inspirations)
-    console.log(inspirations)
-  })
+const showInspirations = inspirations => {
+  inspirationsElement.innerHTML = inspirations
+    .map(inspiration => createInspirationInsert(inspiration))
+    .join('')
+}
+
+getAllInspirations()
+  .then(showInspirations)
