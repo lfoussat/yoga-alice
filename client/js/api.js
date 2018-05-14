@@ -5,6 +5,15 @@ export const getAllInspirations = () => {
     .then(res => res.json())
 }
 
+export const sendInspiration = formData => {
+  return fetch('http://localhost:5300/add-inspiration', {
+    method: 'post',
+    // 'credentials': 'include',
+    body: formData
+  })
+    .then(res => res.json())
+}
+
 export const getInspirationById = id => {
   return fetch(`http://localhost:5300/inspirations-yoga/${id}`)
     .then(res => res.json())

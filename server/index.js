@@ -55,6 +55,29 @@ app.get('/inspirations-yoga', (req, res) => {
     .catch(err => res.status(500).end(err.message))
 })
 
+app.post('/add-inspiration', async (req, res) => {
+  upload(req, res, async (err) => {
+    if (err) {
+      console.log('there is an error', err)
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        return res.json({error: 'File too big'})
+      }
+      if (req.fileValidationError) {
+        return res.json({ error: 'Invalid type file' })
+      }
+    }
+
+    const inspiration = req.body
+
+    inspiration.createdAt = Date.now()
+    inspiration.picture = req.file ? req.file.filename : 'default.jpg'
+
+    await db.addInspiration(inspiration)
+      .then(() => res.json('ok'))
+      .catch(err => res.status(500).end(err.message))
+  })
+})
+
 app.get('/inspirations-yoga/:id', async (req, res) => {
   const inspirations = await db.getInspirations()
   const id = Number(req.params.id)
