@@ -1,0 +1,57 @@
+#edit_inspiration_btn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-top: 60px;
+  z-index: 10;
+}
+
+/* #edit_inspiration_btn button {
+  background-color: #402D46;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+} */
+
+#edit_btn {
+  padding: 10px;
+  background-color: #402D46;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+}
+
+#delete_btn {
+  background-color: #D9612C;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+}
+
+.fas {
+  font-size: 22px;
+  margin-left: 0px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+p {
+  padding: 20px;
+}
+
+.pPicture {
+  text-align: center;
+}
+
+.pPicture img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.pText p {
+  text-align: justify;
+  padding-top: 0;
+}
