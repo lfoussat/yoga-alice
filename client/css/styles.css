@@ -3,16 +3,19 @@
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Julius Sans One', sans-serif;
   margin: 125px 0px 50px 0px;
   text-align: center;
 }
 
-
-
+h3 {
+  margin-bottom: 25px;
+}
 
 /***************** HEADER navigation *****************/
 
@@ -72,7 +75,7 @@ h1 {
 /***************** FOOTER STYLE *****************/
 
 #yogaAliceFooter {
-  background-color: #000000;
+  background-color: #070707;
   text-align: center;
   padding: 15px;
   margin-top: 100px;
@@ -83,13 +86,6 @@ h1 {
   color: #fff;
   padding: 5px;
   text-decoration: none;
-}
-
-/* inspirations */
-
-#inspirations {
-  margin-right: 10%;
-  margin-left: 10%;
 }
 
 /***************** END OF FOOTER STYLE *****************/
@@ -106,6 +102,7 @@ h1 {
   height: 60px;
   padding: 0px;
   z-index: 20;
+  box-shadow: 0px 1px 2px #00000047;
 }
 
 /* Logo */
