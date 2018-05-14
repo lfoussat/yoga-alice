@@ -39,6 +39,15 @@ const upload = multer({
 
 // images - authorize Access
 app.use('/images', express.static(uploadDir)) // module to access images
+
+// // headers middleware
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', req.headers.origin)
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+//   res.header('Access-Control-Allow-Credentials', 'true') // important
+//   next()
+// })
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', req.headers.origin)
   res.header('Access-Control-Allow-Methods', '*')
