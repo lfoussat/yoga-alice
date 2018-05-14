@@ -86,4 +86,28 @@ app.get('/inspirations-yoga/:id', async (req, res) => {
   res.json(inspiration)
 })
 
+app.post('/update-inspiration/:id', async (req, res, next) => {
+  upload(req, res, (err) => {
+    if (err) {
+      console.log('there is an error', err)
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        return res.json({error: 'file too big'})
+      }
+      if (req.fileValidationError) {
+        return res.json({ error: 'Invalid type file' })
+      }
+    }
+
+    console.log(req.params.id);
+
+    const inspirationId = Number(req.params.id)
+    const inspirationInfo = req.body
+    console.log(inspirationInfo);
+    const newPicture = req.file
+
+    db.updateInspirationInfo(inspirationId, inspirationInfo, newPicture)
+      .then(() => res.json('ok'))
+      .catch(next)
+  })
+})
 app.listen(5300, () => console.log(`j'écoute sur le port 5300`))

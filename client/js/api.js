@@ -18,3 +18,13 @@ export const getInspirationById = id => {
   return fetch(`http://localhost:5300/inspirations-yoga/${id}`)
     .then(res => res.json())
 }
+
+export const sendUpdateInspiration = (formData, id) => {
+  return fetch(`http://localhost:5300/update-inspiration/${id}`, {
+    method: 'post',
+    // 'credentials': 'include',
+    body: formData
+  })
+    .then(res => res.json())
+}
+
