@@ -1,5 +1,14 @@
 /* global fetch */
 
+const postJson = (url, content) => fetch(url, {
+  method: 'post',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  // credentials: 'include',
+  body: JSON.stringify(content)
+})
+
 export const getAllInspirations = () => {
   return fetch('http://localhost:5300/inspirations-yoga')
     .then(res => res.json())
