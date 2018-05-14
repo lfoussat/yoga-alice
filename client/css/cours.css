@@ -1,0 +1,13 @@
+.container-fluid {
+  padding-left: 0px;
+}
+
+.fixed-picture img {
+  height: 100vh;
+  position: fixed;
+  z-index: -10;
+}
+
+.scrolled-text {
+  text-align: justify;
+}
