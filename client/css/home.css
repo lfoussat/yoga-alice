@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway+Dots');
+
+#yoga_alice_carousel {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.mySlides {
+  width: 100%;
+  max-height: 100vh;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.ya-animate-fading {
+  animation: fading 10s infinite;
+}
+
+.quote {
+  text-transform: uppercase;
+  font-family: 'Raleway Dots', cursive;
+  font-size: 4vh;
+  text-align: center;
+  margin: 10%;
+}
+
+.parallax {
+  background-image: url("http://localhost:5300/images/concrete_seamless.png");
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#forme-parallax-1 {
+  background-image: url('http://localhost:5300/images/forme5.png');
+  z-index: 10;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  margin-top: -55px;
+  margin-left: 2%;
+}
+
+#forme-parallax-2 {
+  background-image: url("http://localhost:5300/images/forme3.png");
+  z-index: 10;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+  margin-left: 88%;
+}
+
+#forme-parallax-3 {
+  background-image: url(http://localhost:5300/images/forme6.png);
+  z-index: 10;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  margin-top: -76px;
+  margin-left: 30%;
+  transform: rotate(76deg);
+}
+
+#about_me img {
+  width: 100%;
+}
+
+.text {
+  padding: 50px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-align: justify;
+}
+
+#about_me a, #stages a, #cours a, #shiatsu a {
+  border-top: 1px solid rgba(185, 179, 174, 0.5);
+  border-bottom: 1px solid rgba(185, 179, 174, 0.5);
+  width: 100%;
+  display: block;
+  padding: 10px 0;
+  transition: 1s;
+  margin-top: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(128, 128, 128);
+  box-shadow: 0px 1px 0px #00000026;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+#about_me a:hover, #stages a:hover, #cours a:hover, #shiatsu a:hover {
+  color: #43986A;
+  border-color: #43986A;
+}
+
+#avis p:nth-child(2) {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+#see-all-inspi {
+  background-color: #442B48;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  line-height: 40px;
+}
+
+#see-all-inspi a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+#see-all-inspi p {
+  margin: 0px;
+}
+
+#shiatsu {
+  text-align: center;
+}
+
+#about_me h2 {
+  margin: 50px;
+}
+
+#shiatsu h2 {
+  margin-top: 0px;
+}
+
+#cours h2, #stages h2 {
+  margin: 40px;
+}
+
+/* .diapo{
+  box-shadow: -10px 10px 0px -4px #2a2626;
+} */
+
+
+.diapo img{
+  width: 100%;
+}
+
+.diapo {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* Green banner style */
+.greenBanner{
+  padding: 50px;
+  color: rgba(7, 7, 7, 0.6);
+}
+
+/* test color animation */
+.colorAnimation{
+  animation: colorAnimation 15s ease-in-out infinite both;
+  -webkit-animation: colorAnimation 15s ease-in-out infinite both;
+}
+
+/* inspiraitons */
+.inspiration {
+  height: 350px;
+  padding: 20px;
+}
+
+.inspiration img {
+  height: 200px;
+  text-align: center;
+}
+
+.fa, .fas {
+  font-size: 42px;
+  margin-left: 45%;
+}
+
+.inspiration p {
+  font-size: 16px;
+  height: 130px;
+  text-align: justify;
+  padding: 15px;
+}
+
+.inspiration h2, .inspiration a {
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgba(7, 7, 7, 0.6);
+  height: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* contact */
+
+/*SECTION - contact us*/
+
+form {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+label {
+  width: 100%;
+}
+
+#contact {
+  margin-top: 50px;
+}
+
+#contact-background {
+  background-color: #fbf9f9;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+#yogaAliceFooter {
+  margin-top: 0px;
+}
+
+#email, #message{
+  border:1px solid #3f3f3f;
+  padding:5px;
+  margin:5px;
+  font-family:'Raleway', sans-serif;
+  font-size:14px;
+  display:block;
+  margin-bottom:20px;
+  cursor:auto;
+  color:#3f3f3f;
+  padding-left:10px;
+  padding-right:10px;
+  width: 98%;
+}
+
+#message {
+  height: 100px;
+}
+
+#send{
+  padding:12px;
+  background-color:#43986A;
+  color:#ffffff;
+  font-family:'Raleway', sans-serif;
+  font-size:16px;
+  cursor:pointer;
+  width:100%;
+  margin-top:5px;
+}
+
+/*Back to top button*/
+
+#arrowTop{
+  width:50px;
+  height:50px;
+  transition-property:transform;
+  transition-duration:0.5s;
+  transition-delay:0.1s;
+  transition-timing-function:ease-in-out;
+}
+
+#arrowTop:hover{
+  transform: translateY(-10px);
+}
+
+.backToTop{
+  text-align:center;
+  display:block;
+  margin-top:70px;
+}
+
+.backToTop a p{
+  text-transform:uppercase;
+  text-align:center;
+  font-size:16px;text-decoration:none;
+  color: #070707;
+  padding: 10px;
+}
+
+.backToTop a{
+  text-decoration:none;
+}
+
+@keyframes colorAnimation {
+  0% {
+      background-color: #FEEF97;
+  }
+  25% {
+      background-color: #BCFFDB;
+  }
+
+  50% {
+      background-color: #C1EEFF;
+  }
+  75% {
+      background-color: #BEE6CE;
+  }
+  100% {
+      background-color: #FEEF97;
+  }
+}
+
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
