@@ -41,6 +41,7 @@ const upload = multer({
 app.use('/images', express.static(uploadDir)) // module to access images
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', req.headers.origin)
+  res.header('Access-Control-Allow-Methods', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
