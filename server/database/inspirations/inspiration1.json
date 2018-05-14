@@ -1,7 +1,9 @@
 {
   "id": 1,
   "title": "Love this video",
+  "smalldescription": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
   "description": "It's about how yoga is good for your body and your soul",
-  "picture": "../img/cours.jpg",
+  "picture": "cours.jpg",
+  "color": "#D3F6DB",
   "createdAt": 1522142635871
 }

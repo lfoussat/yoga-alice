@@ -1,7 +1,9 @@
 {
   "id": 3,
   "title": "A nice place for a retreat",
+  "smalldescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
   "description": "I discovered this place a week ago and wanted to talk about it...",
-  "picture": "../img/cours.jpg",
+  "picture": "cours.jpg",
+  "color": "#f1f7ed",
   "createdAt": 1522152635971
 }
