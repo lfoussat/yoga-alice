@@ -16,8 +16,34 @@
     <div id="header">Header</div>
     <h1>Inspirations yoga</h1>
 
-    <div id="inspirations">
-      Loading inspirations...
+      <div id="add_inspiration">
+        <div id="add_inspiration_bloc">
+          <h3>Ajouter une inspiration</h3>
+          <p id="add_inspiration_btn">+</p>
+        </div>
+        <form id="add_inspiration_form">
+          <h3>Ajouter une inspiration</h3>
+          <label for="inspiration_title">Titre :<br>
+            <input type="text" id="inspiration_title" name="title" placeholder="">
+          </label><br>
+          <label for="inspiration_small_description">Description courte :<br>
+            <input type="text" id="inspiration_small_description" name="smalldescription" placeholder="">
+          </label><br>
+          <label for="inspiration_description">Description :<br>
+            <textarea type="text" id="inspiration_description" name="description" placeholder=""></textarea>
+          </label><br>
+          <label for="add_inspiration_image">Image :<br>
+            <input id="add_inspiration_image" type="file" name="picture"/>
+          </label><br>
+          <div id="error_message" style="color: red"></div><br>
+          <input type="submit" id="add" value="Ajouter"><br>
+          <p><a href="#" id="cancel">Annuler</a><p>
+        </form>
+      </div>
+
+      <div id="inspirations" class="row">
+        Loading inspirations...
+      </div>
     </div>
 
     <div id="footer">Footer</div>

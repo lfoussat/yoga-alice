@@ -15,6 +15,17 @@ const getInspirations = () => {
     .then(inspirationsListValue => inspirationsListValue.map(inspiration => JSON.parse(inspiration)))
 }
 
+const addInspiration = async inspiration => {
+  const inspirations = await getInspirations()
+
+  inspiration.id = inspirations.length + 1
+
+  const filename = `inspiration${inspirations.length + 1}.json`
+  const filepath = path.join(inspirationsDir, filename)
+
+  return writeFile(filepath, JSON.stringify(inspiration, null, 2), 'utf8')
+}
 module.exports = {
   getInspirations
+  addInspiration,
 }
