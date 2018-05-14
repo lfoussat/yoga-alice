@@ -36,6 +36,9 @@ const upload = multer({
     fileSize: 5000000
   }
 }).single('picture')
+
+// images - authorize Access
+app.use('/images', express.static(uploadDir)) // module to access images
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', req.headers.origin)
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
