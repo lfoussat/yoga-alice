@@ -110,4 +110,18 @@ app.post('/update-inspiration/:id', async (req, res, next) => {
       .catch(next)
   })
 })
+
+app.delete('/inspirations-yoga/:id', async (req, res) => {
+  let inspirations = await db.getInspirations()
+  console.log(inspirations);
+  const id = Number(req.params.id)
+  console.log(id);
+  const inspirationIndex = inspirations.findIndex(inspiration => inspiration.id === id)
+  console.log(inspirationIndex);
+  // rm file
+  inspirations = inspirations.slice(0, inspirationIndex).concat(inspirations.slice(inspirationIndex + 1))
+  console.log(inspirations);
+  res.json(inspirations)
+})
+
 app.listen(5300, () => console.log(`j'écoute sur le port 5300`))

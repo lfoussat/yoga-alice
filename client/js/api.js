@@ -28,3 +28,6 @@ export const sendUpdateInspiration = (formData, id) => {
     .then(res => res.json())
 }
 
+export const deleteInspiration = id => {
+  return fetch(`http://localhost:5300/inspirations-yoga/${id}`, { method: 'delete' })
+}
