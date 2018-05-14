@@ -1,5 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const multer = require('multer')
+const path = require('path')
 
 const db = require('./db-fs.js')
 
@@ -9,8 +11,33 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
+// multer set up
+const uploadDir = path.join(__dirname, 'public/images')
+
+const storage = multer.diskStorage({
+  destination: uploadDir,
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
+})
+
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => { // accepts only images
+    const ext = path.extname(file.originalname).toLowerCase()
+    if (ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
+      req.fileValidationError = 'Invalid file type'
+      return cb(new Error('Invalid file type'), false)
+    }
+    cb(null, true)
+  },
+  limits: { // limited at 5 Mo
+    fileSize: 5000000
+  }
+}).single('picture')
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Origin', req.headers.origin)
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
